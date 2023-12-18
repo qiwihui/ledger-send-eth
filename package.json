@@ -1,0 +1,56 @@
+{
+  "name": "ledger-send-eth",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ledgerhq/hw-app-eth": "^6.35.0",
+    "@ledgerhq/hw-transport-webhid": "^6.28.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.2",
+    "ethers": "^5.7.2",
+    "parcel": "^2.10.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "prebuild": "rm -rf dist .parcel-cache",
+    "build": "parcel build public/index.html --no-source-maps --reporter @parcel/reporter-bundle-analyzer"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "alias": {
+    "@ledgerhq/devices": "@ledgerhq/devices/lib-es",
+    "@ledgerhq/domain-service": "@ledgerhq/domain-service/lib-es",
+    "@ledgerhq/evm-tools": "@ledgerhq/evm-tools/lib-es",
+    "@ledgerhq/live-network": "@ledgerhq/live-network/lib-es",
+    "@ledgerhq/cryptoassets": "@ledgerhq/cryptoassets/lib-es"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.10.3",
+    "@parcel/reporter-bundle-analyzer": "^2.10.3",
+    "@parcel/transformer-webmanifest": "^2.10.3",
+    "buffer": "^6.0.3",
+    "parcel-bundler": "^1.12.5",
+    "stream-http": "^3.2.0"
+  }
+}
