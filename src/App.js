@@ -255,12 +255,15 @@ function App() {
                 onClick={sendTransaction}
               >
                 {(creating && (
-                  <Spinner
-                    animation="grow"
-                    role="status"
-                    variant="info"
-                    size="sm"
-                  ></Spinner>
+                  <>
+                    <Spinner
+                      animation="grow"
+                      role="status"
+                      variant="info"
+                      size="sm"
+                    ></Spinner>
+                    Please sign on your ledger
+                  </>
                 )) || <span>Create Transaction</span>}
               </button>
             </div>
